@@ -49,6 +49,21 @@
 		});
 	</script>
 
+	<script>
+		var $form = $('form#contactform'),
+	    url = 'https://script.google.com/macros/s/AKfycbxh-5u7hxOqwAADWB6oNVv5XHaZnpnaQq8cs-cgad0LDQvAwFTP/exec'
+
+		$('#submit-form').on('click', function(e) {
+		  e.preventDefault();
+		  var jqxhr = $.ajax({
+		    url: url,
+		    method: "GET",
+		    dataType: "json",
+		    data: $form.serializeObject()
+		  }).success(
+		  );
+		})
+	</script>
 </head>
 
 <body>
@@ -413,19 +428,17 @@
 					</div>
 				</div>
 				<!-- /contact -->
-<br>
-<hr>
 
 				<!-- contact form -->
-				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form">
-						<input type="text" class="input" placeholder="Name">
-						<input type="email" class="input" placeholder="Email">
-						<input type="text" class="input" placeholder="Subject">
-						<textarea class="input" placeholder="Message"></textarea>
-						<button class="main-btn">Send message</button>
+<!-- 				<div class="col-md-8 col-md-offset-2">
+					<form class="contact-form" id="contactform">
+						<input type="text" name="name" class="input" placeholder="Name">
+						<input type="email" name="email" class="input" placeholder="Email">
+						<input type="text" name="subject" class="input" placeholder="Subject">
+						<input type="text" class="input" name="message" placeholder="Message"></input>
+						<button type="submit" id="submit-form" class="main-btn">Send message</button>
 					</form>
-				</div>
+				</div> -->
 				<!-- /contact form -->
 
 			</div>
