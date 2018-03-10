@@ -26,6 +26,7 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/preloader.css" />
 	
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
@@ -33,6 +34,7 @@
 	<!-- JS scrolling scripts-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+	<script type="text/javascript" src="js/tilt.jquery.js"></script>
 	<script>
 		$(document).ready(function(){
 		  $("a").on('click', function(event) {
@@ -64,6 +66,11 @@
 		  );
 		})
 	</script>
+	<style>
+		.row img{
+			border-radius: 50%;
+		}
+	</style>
 </head>
 
 <body>
@@ -254,119 +261,47 @@
 		<!-- Container -->
 		<div class="container">
 			<center>
-			<!-- Row -->
-			<div class="row">
 
-				<!-- Section header -->
 				<div class="section-header text-center">
 					<h2 class="title">Our Team</h2>
 				</div>
-				<!-- /Section header -->
-				<!-- team -->
-				<div style="margin-left: 12% !important; margin-right: 0% !important;text-align: center !important;">
-				<div class="col-sm-2">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/sumit.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://sumit-ghosh.com" target="_blank"><i class="fa fa-globe"></i></a>
-									<a href="https://github.com/SkullTech" target="_blank"><i class="fa fa-github"></i></a>
-									<a href="https://twitter.com/SkullTech101" target="_blank"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Sumit Ghosh</h3>
-							<span>CEO & Lead Developer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-				<div class="col-sm-2">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/ankit.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://www.instagram.com/ank.it42/" target="_blank"><i class="fa fa-instagram"></i></a>
-									<a href="https://github.com/techcentaur" target="_blank"><i class="fa fa-github"></i></a>
-									<a href="https://twitter.com/theboywhosawit" target="_blank"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Ankit Solanki</h3>
-							<span>CTO & Lead Developer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-				<div class="col-sm-2">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/aniket.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Aniket Kumar</h3>
-							<span>Lead Developer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->				<!-- team -->
-				<div class="col-sm-2">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/abhishek.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Abhishek Maderana</h3>
-							<span>Lead Developer</span>
-						</div>
-					</div>
-				</div>
-				</div>
-				<!-- /team -->
-				<!-- team -->
-				<div class="col-sm-2">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/harsh.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://www.instagram.com/harshlal97.hl" target="_blank"><i class="fa fa-instagram"></i></a>
-									<a href="https://www.linkedin.com/in/harsh-lal-65b5b8138/" target="_blank"><i class="fa fa-linkedin"></i></a>
-									<a href="https://www.facebook.com/harsh.lal.129" target="_blank"><i class="fa fa-facebook"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content" style="padding-bottom: 40px;">
-							<h3>Harsh Lal</h3>
-							<span>CMD</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-			</div>
-			<!-- /Row -->
+				 <div class="row">
+				    <div class="col-lg-4 col-sm-6 col-xs-12">
+				        <a href="#">
+				             <img src="img/sumit.jpg" height="200px" width="200px"" class="thumbnail img-responsive">
+				        </a>
+				        <h4>Sumit Ghosh</h4>
+				        <p>CEO and Lead Developer</p>
+				    </div>
+				     <div class="col-lg-4 col-sm-6 col-xs-12">
+				        <a href="https://techcentaur.github.io/tale/">
+				             <img src="img/ankit.jpg" height="200px" width="200px" class="thumbnail img-responsive">
+				        </a>
+				         <h4>Ankit Solanki</h4>
+				        <p>CTO and Lead Developer</p>
+				    </div>
+				     <div class="col-lg-4 col-sm-6 col-xs-12">
+				        <a href="#">
+				             <img src="img/aniket.jpg" height="200px" width="200px" class="thumbnail img-responsive">
+				        </a>
+				         <h4>Aniket Kumar</h4>
+				        <p>Lead Developer</p>
+				    </div>
+				 <div class="row" style="margin-left: 20%;">
+				    <div class="col-lg-4 col-sm-6 col-xs-12">
+				        <a href="#">
+				             <img src="img/abhishek.jpg" height="200px" width="200px" class="thumbnail img-responsive">
+				        </a>
+				         <h4>Abhishek Maderana</h4>
+				        <p>Lead Developer</p>
+				    </div>
+				     <div class="col-lg-4 col-sm-6 col-xs-12" style="margin-left: 5%;">
+				        <a href="#">
+				             <img src="img/harsh.jpg" height="200px" width="200px" class="thumbnail img-responsive">
+				        </a>
+				         <h4>Harsh Lal</h4>
+				        <p>CMD</p>
+				    </div>
 		</center>
 		</div>
 		<!-- /Container -->
@@ -510,13 +445,15 @@
 			<span></span>
 		</div>
 	</div>
-	<!-- /Preloader -->
+
+<!-- /Preloader -->
 
 	<!-- jQuery Plugins -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
