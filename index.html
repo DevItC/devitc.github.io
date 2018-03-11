@@ -1,471 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114830628-1"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="shortcut icon" href="style/images/favicon.png">
+
+<title>DevIt | Home</title>
+
+<!-- Bootstrap core CSS -->
+<link href="style/css/bootstrap.min.css" rel="stylesheet">
+<link href="style/css/plugins.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="style/css/color/green.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="style/type/icons.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-  gtag('config', 'UA-114830628-1');
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 </script>
-
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>DevItC | Home</title>
-
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-	<!-- Owl Carousel -->
-	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
-
-	<!-- Magnific Popup -->
-	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
-
-	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-	<link type="text/css" rel="stylesheet" href="css/preloader.css" />
-	
-	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-
-	<!-- JS scrolling scripts-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="js/tilt.jquery.js"></script>
-	<script>
-		$(document).ready(function(){
-		  $("a").on('click', function(event) {
-		    if (this.hash !== "") {
-		      event.preventDefault();
-		      var hash = this.hash;
-		      $('html, body').animate({
-		        scrollTop: $(hash).offset().top
-		      }, 1200, function(){
-		           window.location.hash = hash;
-		      });
-		    }
-		  });
-		});
-	</script>
-
-	<script>
-		var $form = $('form#contactform'),
-	    url = 'https://script.google.com/macros/s/AKfycbxh-5u7hxOqwAADWB6oNVv5XHaZnpnaQq8cs-cgad0LDQvAwFTP/exec'
-
-		$('#submit-form').on('click', function(e) {
-		  e.preventDefault();
-		  var jqxhr = $.ajax({
-		    url: url,
-		    method: "GET",
-		    dataType: "json",
-		    data: $form.serializeObject()
-		  }).success(
-		  );
-		})
-	</script>
-	<style>
-		.row img{
-			border-radius: 50%;
-		}
-	</style>
 </head>
-
 <body>
-	<!-- Header -->
-	<header id="home">
-		<!-- Background Image -->
-		<div class="bg-img" style="background-image: url('./img/background-optimised.jpg');">
-			<div class="overlay"></div>
-		</div>
-		<!-- /Background Image -->
+<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+<div class="body-wrapper">
+  <nav class="navbar navbar-default default">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="basic-wrapper"> <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+          <div class="navbar-brand"> <a href="index.html"><img src="#" srcset="style/images/logodevit-alt.png 1x, style/images/logodevit-alt.png 5x" class="logo-light" alt="" /><img src="#" srcset="style/images/logodevit.png 1x, style/images/logodevit.png 5x" class="logo-dark" alt="" /></a>
+          </div>
+          <!-- /.navbar-brand -->
+        </div>
+        <!-- /.basic-wrapper --> 
+      </div>
+      <!-- /.navbar-header -->
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#home" class="js-activated">Home <span class="caret"></span></a></li>
 
-		<!-- Nav -->
-		<nav id="nav" class="navbar nav-transparent">
-			<div class="container">
+          <li><a href="#services" class="js-activated">Services <span class="caret"></span></a></li>
+          </li>
+          <li><a href="#about" class="js-activated">About <span class="caret"></span></a></li>
+          <li><a href="#process" class="js-activated">Workflow<span class="caret"></span></a></li>
+          <li><a href="#team" class="js-activated">Team <span class="caret"></span></a></li>
+          <li><a href="#contact" class="js-activated">Contact Us <span class="caret"></span></a></li>
+        </ul>
+        <!-- /.navbar-nav --> 
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container --> 
+  </nav>
+  <!-- /.navbar -->
+  
+  <div class="tp-fullscreen-container revolution" id="home">
+    <div class="tp-fullscreen">
+      <ul>
+        <li data-transition="fade"> <img src="style/images/art/slider-bg1.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+          <div class="tp-caption large sfb text-center" data-x="center" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">DevIt.Consultancy</div>
+          <div class="tp-caption medium sfb text-center" data-x="center" data-y="348" data-speed="900" data-start="1500" data-easing="Sine.easeOut">We code for humans on Earth and beyond.</div>
+          <div class="tp-caption sfb" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large btn-border">Start Right Away!</a></div>
+        </li>
+        <li data-transition="fade"> <img src="style/images/art/slider-bg2.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+          <div class="tp-caption large sfl text-center" data-x="center" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">DevIt.Consultancy</div>
+          <div class="tp-caption medium sfr text-center" data-x="center" data-y="343" data-speed="900" data-start="1500" data-easing="Sine.easeOut">Creating effective solutions for your IT headaches.</div>
+          <div class="tp-caption sfb" data-x="center" data-y="420" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Get in touch</a></div>
+        </li>
+        <li data-transition="fade"> <img src="style/images/art/slider-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+          <div class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">DevIt.Consultancy</div>
+          <div class="tp-caption medium sfr" data-x="30" data-y="403" data-speed="900" data-start="1500" data-easing="Sine.easeOut">Having trouble in codes?
+          Having concern about workflows?
+          <br>
+          If you need an effective solution, leave it to the pros.</div>
+          <div class="tp-caption sfr" data-x="30" data-y="470" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Join Us.</a></div>
+        </li>
+      </ul>
+      <div class="tp-bannertimer tp-bottom"></div>
+    </div>
+    <!-- /.tp-fullscreen-container --> 
+  </div>
+  <!-- /.revolution -->
+  
+  <div class="light-wrapper" id="services">
+    <div class="container inner">
+      <div class="headline text-center">
+        <h2>Services we provide</h2>
+        <p class="lead animated-text letters type"> <span>Our developers are skilled in</span> <span class="animated-text-wrapper waiting"> <b class="is-visible">consuming coffee.</b> <b>staying up late.</b> <b>communicating effectively.</b> <b>everthing - every thing - every fucking thing.</b> </span> </p>
+      </div>
+      <div class="divide30"></div>
+      <div class="row services">
+        <div class="col-sm-4">
+          <div class="service text-center">
+            <div class="icon"> <img src="style/images/icons/lulu-desktop.png" alt="" /> </div>
+            <h4>Full-Stack Web Development</h4>
+            <!-- <p>We work in PHP, Javascript, HTML/CSS, Javascript, jQuery, Jekyll, WordPress.</p> -->
+          </div>
+          <!--/.service --> 
+        </div>
+        <!--/column -->
+        <div class="col-sm-4">
+          <div class="service text-center">
+            <div class="icon"> <img src="style/images/icons/lulu-paint-palette.png" alt="" /> </div>
+            <h4>Creating Designs</h4>
+          </div>
+          <!--/.service --> 
+        </div>
+        <!--/column -->
+        <div class="col-sm-4">
+          <div class="service text-center">
+            <div class="icon"> <img src="style/images/icons/lulu-coding.png" alt="" /> </div>
+            <h4>Python Scripts</h4>
+            <!-- <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div> -->
+          <!--/.service --> 
+        </div>
+        <!--/column --> 
+      </div>
+      <!-- /.row -->
+      <div class="divide30"></div>
+      <div class="row services">
+        <div class="col-sm-4">
+          <div class="service text-center">
+            <div class="icon"> <img src="style/images/icons/lulu-chats.png" alt="" /> </div>
+            <h4>Advice and Discussion</h4>
+            
+          </div>
+          <!--/.service --> 
+        </div>
+        <!--/column -->
+        <div class="col-sm-4">
+          <div class="service text-center">
+            <div class="icon"> <img src="style/images/icons/lulu-gear.png" alt="" /> </div>
+            <h4>Natural Langauge processing</h4>
+            
+          </div>
+          <!--/.service --> 
+        </div>
+        <!--/column -->
+        <div class="col-sm-4">
+          <div class="service text-center">
+            <div class="icon"> <img src="style/images/icons/lulu-clipboard.png" alt="" /> </div>
+            <h4>Browser Automation and QA Testing</h4>
+          </div>
+          <!--/.service --> 
+        </div>
+        <!--/column --> 
+      </div>
+      <!-- /.row --> 
+      
+    </div>
+    <!-- /.container --> 
+    
+  </div>
+  <!-- /.light-wrapper -->
+  
+  
+  
+  <div class="outer-wrap inverse-wrapper">
+    <div id="video-wrap" class="video-wrap">
+      <video preload="metadata" autoplay loop id="video-office">
+        <source src="style/video/office.mp4" type="video/mp4">
+        <source src="style/video/office.webm" type="video/webm">
+      </video>
+      <div class="content-overlay container">
+        <div class="headline text-center">
+          <h2>A Society of Innovaters</h2>
+          <p class="lead">We don't just code. We create solutions.</p>
+        </div>
+      </div>
+      <!-- /.container --> 
+    </div>
+    <!-- /.video-wrap --> 
+  </div>
+  <!-- /.inverse-wrapper -->
+  
+  <div class="white-wrapper" id="about">
+    <div class="col-image">
+      <div class="bg-wrapper col-md-6">
+        <div class="bg-holder" style="background-image: url(style/images/art/aboutfuck.jpg);"></div>
+      </div>
+      <!--/.bg-wrapper -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-md-offset-7 inner-col">
+            <div class="section-title">
+              <h3>About DevIt</h3>
+            </div>
+            <p class="lead">DevIt Consultancy is a startup software consultancy firm founded by students of IIT Delhi, each member having significant individual working experience as freelance consultants. Our goal is to maximize client satisfaction, providing you with efficient IT solutions.</p>
+            <ul class="progress-list">
+              <li>
+                <p>Client Communication<em>90%</em></p>
+                <div class="progress plain">
+                  <div class="bar" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li>
+                <p>Project Management <em>80%</em></p>
+                <div class="progress plain">
+                  <div class="bar" style="width: 80%;"></div>
+                </div>
+              </li>
+              <li>
+                <p>Programming <em>100%</em></p>
+                <div class="progress plain">
+                  <div class="bar" style="width: 100%;"></div>
+                </div>
+              </li>
+            </ul>
+            <!-- /.progress-list --> 
+          </div>
+          <!--/column --> 
+        </div>
+        <!--/.row --> 
+      </div>
+      <!--/.container --> 
+    </div>
+    <!--/.col-image --> 
+    
+  </div>
+  <!-- /.white-wrapper -->
+  
+  <div class="light-wrapper" id="process">
+    <div class="container inner">
+      <div class="section-title text-center">
+        <h3>Workflow</h3>
+        <p class="lead">Our process on creating awesome projects and providing helpful services.</p>
+      </div>
+      <div class="thin3">
+        <div class="row circle-wrapper">
+          <div class="col-sm-6 col-md-3">
+            <div class="circle blue-bg">
+              <div class="text">1. Discussing</div>
+            </div>
+          </div>
+          <!-- /column -->
+          <div class="col-sm-6 col-md-3">
+            <div class="circle red-bg">
+              <div class="text">2. Designing</div>
+            </div>
+          </div>
+          <!-- /column -->
+          <div class="col-sm-6 col-md-3">
+            <div class="circle green-bg">
+              <div class="text">3. Developing</div>
+            </div>
+          </div>
+          <!-- /column -->
+          <div class="col-sm-6 col-md-3">
+            <div class="circle yellow-bg">
+              <div class="text">4. Delivering</div>
+            </div>
+          </div>
+          <!-- /column --> 
+        </div>
+        <!--/.row -->
+        <div class="divide30"></div>
+        <p class="text-center">Get in touch with us, and we will discuss with you all the relevant details about your projects, forming a suitable blueprint with the required specifications. Once the blueprint is finalised, our developers will start working on it. The client will be updated of the progress regularly. After the completion and testing of the project, it will be delivered to you within deadline.</p>
+      </div>
+      <!--/.thin --> 
+    </div>
+    <!--/.container --> 
+  </div>
+  <!-- /.light-wrapper -->
+  
+  <div class="light-wrapper" id="team">
+    <div class="container inner">
+      <div class="section-title text-center">
+        <h3>Meet Our Team</h3>
+      </div>
+      <div class="row grid-view" style="margin-left: 20%;">
+        <!-- /column -->
+        <div class="col-sm-3 text-center">
+          <figure><img src="style/images/art/sumit.jpg" alt="" /></figure>
+          <h4 class="post-title">Sumit Ghosh</h4>
+          <div class="meta">CEO and Lead Developer</div>
+<!--           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros sed posuere quam.</p> -->
+          <ul class="social">
+            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-s-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3 text-center">
+          <figure><img src="style/images/art/ankit.jpg" alt="" /></figure>
+          <h4 class="post-title">Ankit Solanki</h4>
+          <div class="meta">CTO and Lead Developer</div>
+<!--           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo.</p>
+ -->          <ul class="social">
+            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-s-gplus"></i></a></li>
+          </ul>
+        </div>
 
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a href="index.html">
-							<img class="logo" src="img/logodevit.png" alt="logo">
-							<img class="logo-alt" src="img/logodevit-alt.png" alt="logo">
-						</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Collapse nav button -->
-					<div class="nav-collapse">
-						<span></span>
-					</div>
-					<!-- /Collapse nav button -->
-				</div>
-
-				<!--  Main navigation  -->
-				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#work">How We Work</a></li>
-					<li><a href="#service">Services</a></li>
-					<li><a href="#team">Team</a></li>
-					<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdEJaPC57s9tk5lXewFyCxko7fKQeXwwe3Z-chUsHAdt3FPGw/viewform">We're Hiring!</a></li>
-					<li><a href="#contact">Contact Us</a></li>
-				</ul>
-				<!-- /Main navigation -->
-
-			</div>
-		</nav>
-		<!-- /Nav -->
-
-		<!-- home wrapper -->
-		<div class="home-wrapper">
-			<div class="container">
-				<div class="row">
-
-					<!-- home content -->
-					<div class="col-md-10 col-md-offset-1">
-						<div class="home-content">
-							<h1 class="white-text">DevIt Consultancy</h1>
-							<p class="white-text">We Develop Code For Humans on Earth And Beyond.
-							</p>
-							<button class="white-btn" ><a href="#service">Our Services</a></button>
-							<button class="main-btn"><a href="#contact" style="color: white;">Start Right Away!</a></button>
-						</div>
-					</div>
-					<!-- /home content -->
-				</div>
-			</div>
-		</div>
-		<!-- /home wrapper -->
-
-	</header>
-	<!-- /Header -->
-
-
-	<!-- Work -->
-	<div id="work" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">How We Work?</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-handshake-o"></i>
-						<h3>Discuss Your Project</h3>
-						<p>Get in touch with us, and we will discuss with you all the relevant details about your projects, forming a suitable blueprint with the required specifications.</p>
-<!-- 						<a href="#">Read more</a>
- -->					</div>
-				</div>
-				<!-- /about -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-line-chart"></i>
-						<h3>Our Developers Will Work on it</h3>
-						<p>Once the blueprint is finalised, our developers will start working on it. The client will be updated of the progress regularly.</p>
-<!-- 						<a href="#">Read more</a>
- -->					</div>
-				</div>
-				<!-- /about -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-calendar-check-o"></i>
-						<h3>Completion of Project</h3>
-						<p>After the completion and testing of the project, it will be delivered to you within deadline.</p>
-<!-- 						<a href="#">Read more</a>
- -->					</div>
-				</div>
-				<!-- /about -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /About -->
-<hr>
-	<!-- Service -->
-	<div id="service" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Services We Provide</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-code"></i>
-						<h3>Full-Stack Web Development</h3>
-						<p>We design and develop robust websites, complete with an attractive frontend and effective backend. Additionally we also take care of testing the website. We also develop and maintain Wordpress based websites.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-wrench"></i>
-						<h3>Browser Automation Testing</h3>
-						<p>We do automated testing for web based applications, using industry standard technologies. We also develop scripts to automate tasks.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-cogs"></i>
-						<h3>Natural Language Processing</h3>
-						<p>NLP is a way for computers to analyze, understand, and derive meaning from human language in a smart and useful way. Our developers use different NLP libraries, writing efficient code for practical usage.</p>
-					</div>
-				</div>
-				<!-- /service -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Service -->
-
-
-	<!-- Team -->
-	<div id="team" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-			<center>
-
-				<div class="section-header text-center">
-					<h2 class="title">Our Team</h2>
-				</div>
-				 <div class="row">
-				    <div class="col-lg-4 col-sm-6 col-xs-12">
-				        <a href="#">
-				             <img src="img/sumit.jpg" height="200px" width="200px"" class="thumbnail img-responsive">
-				        </a>
-				        <h4>Sumit Ghosh</h4>
-				        <p>CEO and Lead Developer</p>
-				    </div>
-				     <div class="col-lg-4 col-sm-6 col-xs-12">
-				        <a href="https://techcentaur.github.io/tale/">
-				             <img src="img/ankit.jpg" height="200px" width="200px" class="thumbnail img-responsive">
-				        </a>
-				         <h4>Ankit Solanki</h4>
-				        <p>CTO and Lead Developer</p>
-				    </div>
-				     <div class="col-lg-4 col-sm-6 col-xs-12">
-				        <a href="#">
-				             <img src="img/aniket.jpg" height="200px" width="200px" class="thumbnail img-responsive">
-				        </a>
-				         <h4>Aniket Kumar</h4>
-				        <p>Lead Developer</p>
-				    </div>
-				 <div class="row" style="margin-left: 20%;">
-				    <div class="col-lg-4 col-sm-6 col-xs-12">
-				        <a href="#">
-				             <img src="img/abhishek.jpg" height="200px" width="200px" class="thumbnail img-responsive">
-				        </a>
-				         <h4>Abhishek Maderana</h4>
-				        <p>Lead Developer</p>
-				    </div>
-				     <div class="col-lg-4 col-sm-6 col-xs-12" style="margin-left: 5%;">
-				        <a href="#">
-				             <img src="img/harsh.jpg" height="200px" width="200px" class="thumbnail img-responsive">
-				        </a>
-				         <h4>Harsh Lal</h4>
-				        <p>CMD</p>
-				    </div>
-		</center>
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Team -->
-
-<hr>
-	<!-- Contact -->
-	<div id="contact" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section-header -->
-				<div class="section-header text-center">
-					<h2 class="title">Get in touch</h2>
-				</div>
-				<!-- /Section-header -->
-
-				<!-- contact -->
-				<div class="col-sm-3">
-					<div class="contact">
-						<i class="fa fa-phone"></i>
-						<h3>Phone</h3>
-						<p>+91-8826010973</p>
-						<p>+91-7321808254</p>
-					</div>
-				</div>
-				<!-- /contact -->
-				<!-- contact -->
-				<div class="col-sm-3">
-					<div class="contact">
-						<i class="fa fa-whatsapp"></i>
-						<h3>WhatsApp</h3>
-						<p>+91-8826010973</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-3">
-					<div class="contact">
-						<i class="fa fa-envelope"></i>
-						<h3>E-mail</h3>
-						<p>contact@devitconsultancy.com</p>
-						<p style="font-size: 12px; opacity: 0.5;">Typically replies within a day</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-3">
-					<div class="contact">
-						<i class="fa fa-map-marker"></i>
-						<h3>Address</h3>
-						<p>Some Dormitory, IIT Delhi, Hauz Khas - 110016</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact form -->
-<!-- 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form" id="contactform">
-						<input type="text" name="name" class="input" placeholder="Name">
-						<input type="email" name="email" class="input" placeholder="Email">
-						<input type="text" name="subject" class="input" placeholder="Subject">
-						<input type="text" class="input" name="message" placeholder="Message"></input>
-						<button type="submit" id="submit-form" class="main-btn">Send message</button>
-					</form>
-				</div> -->
-				<!-- /contact form -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Contact -->
-
-
-	<!-- Footer -->
-	<footer id="footer" class="sm-padding bg-dark">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<div class="col-md-12">
-
-					<!-- footer logo -->
-					<div class="footer-logo">
-						<a href="index.html"><img src="img/logodevit-alt.png" alt="logo"></a>
-					</div>
-					<!-- /footer logo -->
-
-					<!-- footer follow -->
-					<ul class="footer-follow">
-						<li><a href="https://www.facebook.com/DevItConsultancy/"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="https://twitter.com/devitconsult"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="https://github.com/DevItC"><i class="fa fa-github"></i></a></li>
-					</ul>
-					<!-- /footer follow -->
-
-					<!-- footer copyright -->
-					<div class="footer-copyright">
-						<p>Copyright &copy; 2018. DevIt Consultancy</p>
-					</div>
-					<!-- /footer copyright -->
-
-				</div>
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- Back to top -->
-	<div id="back-to-top"></div>
-	<!-- /Back to top -->
-
-	<!-- Preloader -->
-	<div id="preloader">
-		<div class="preloader">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
-
-<!-- /Preloader -->
-
-	<!-- jQuery Plugins -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
-	<script type="text/javascript" src="js/functions.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-
+                <!-- /column -->
+        <div class="col-sm-3 text-center">
+          <figure><img src="style/images/art/harsh.jpg" alt="" /></figure>
+          <h4 class="post-title">Harsh Lal</h4>
+          <div class="meta">CDM</div>
+         <!--  <p>Maecenas faucibus mollis interdum. Aenean eu leo quam ornare sem lacinia.</p> -->
+          <ul class="social">
+            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-s-linkedin"></i></a></li>
+          </ul>
+        </div>
+        </div>
+        <div class="row grid-view" style="margin-left: 33%;">
+        <div class="col-sm-3 text-center">
+          <figure><img src="style/images/art/abhishek.jpg" alt="" /></figure>
+          <h4 class="post-title">Abhishek Maderana</h4>
+          <div class="meta">Lead Developer</div>
+         <!--  <p>Maecenas faucibus mollis interdum. Aenean eu leo quam ornare sem lacinia.</p> -->
+          <ul class="social">
+            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-s-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <!-- /column --> 
+        <!-- /column -->
+        <div class="col-sm-3 text-center">
+          <figure><img src="style/images/art/aniket.jpg" alt="" /></figure>
+          <h4 class="post-title">Aniket Kumar</h4>
+          <div class="meta">Lead Developer</div>
+<!--           <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis.</p> -->
+          <ul class="social">
+            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-s-github"></i></a></li>
+            <li><a href="#"><i class="icon-s-gplus"></i></a></li>
+          </ul>
+        </div>
+        <!-- /column -->
+        <!-- /column --> 
+      </div>
+      <!--/.row --> 
+    </div>
+    <!--/.container --> 
+  </div>
+  <!-- /.light-wrapper -->
+  
+  <footer class="inverse-wrapper" id="contact">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="section-title widget-title">Social Networks</h3>
+          <p>Follow us on social networks for regular updates.</p>
+          <ul class="social">
+            <li><a href="https://twitter.com/devitconsult"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/DevItConsultancy/"><i class="icon-s-facebook"></i></a></li>
+            <li><a href="https://github.com/DevItC"><i class="icon-s-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="section-title widget-title">Have a Question?</h3>
+          <div class="newsletter-wrapper">
+            <div id="mc_embed_signup2" class="newsletter-form">
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL2" placeholder="Write a mail" required="">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div class="clear">
+                  <a href="mailto:contact.devitconsultancy.com"><input type="submit" value="Ask Away!" name="subscribe" id="mc-embedded-subscribe2" class="btn"></a>
+                </div>
+            </div>
+            <!-- /#mc_embed_signup2 --> 
+          </div>
+          <!-- /.newsletter-wrapper --> 
+        </div>
+        <!-- <div class="col-sm-4">
+          <h3 class="section-title widget-title">Tags</h3>
+          <div class="tagcloud"> <a href="#" style="font-size: 9pt;">blogroll</a> <a href="#" style="font-size: 19pt;">daily</a> <a href="#" style="font-size: 9pt;">dialog</a> <a href="#" style="font-size: 9pt;">gallery</a> <a href="#" style="font-size: 10pt;">journal</a> <a href="#" style="font-size: 9pt;">link</a> <a href="#" style="font-size: 12pt;">motion</a> <a href="#" style="font-size: 9pt;">music</a> <a href="#" style="font-size: 20pt;">photo</a> <a href="#" style="font-size: 13pt;">professional</a> <a href="#" style="font-size: 16pt;">quotation</a> <a href="#" style="font-size: 9pt;">show</a> <a href="#" style="font-size: 15pt;">sound</a> </div>
+        </div> -->
+      </div>
+      <hr />
+      <div class="row">        
+        <div class="col-sm-6">
+          <div class="widget">
+            <h3 class="section-title widget-title">Get In Touch</h3>
+            <div class="contact-info"> <i class="icon-location"></i> Some messed-up dormitory, IIT Delhi, Hauz Khas - 110016<br />
+              <i class="icon-phone"></i>+91-8826010973<br />
+              <i class="icon-mail"></i> <a href="first.last@email.com">contact@devitconsultancy.com</a>
+              <i class="icon-whatsapp"></i>
+              </div>
+          </div>
+        </div>
+        <!-- /column -->
+        
+        <!-- /column --> 
+      </div>
+      <!-- /.row -->
+      
+      <hr />
+      <p class="copyright pull-left">© 2018 DEV.IT. All rights reserved.</p>
+      <ul class="footer-menu pull-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Workflow</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- .container --> 
+    
+  </footer>
+  <!-- /footer -->
+  <div id="share-bar"></div>
+</div>
+<!--/.body-wrapper --> 
+<script src="style/js/jquery.min.js"></script> 
+<script src="style/js/bootstrap.min.js"></script> 
+<script src="style/js/plugins.js"></script> 
+<script src="style/js/jquery.themepunch.tools.min.js"></script> 
+<script src="style/js/scripts.js"></script>
 </body>
 </html>
