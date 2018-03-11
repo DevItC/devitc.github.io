@@ -56,6 +56,11 @@ $(document).ready(function(){
   });
 });
 </script>
+<style>
+  .photos img{
+        border-radius: 50% !important;
+  }
+</style>
 </head>
 <body>
 <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
@@ -64,7 +69,7 @@ $(document).ready(function(){
     <div class="container">
       <div class="navbar-header">
         <div class="basic-wrapper"> <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-          <div class="navbar-brand"> <a href="index.html"><img src="#" srcset="style/images/logodevit-alt.png 1x, style/images/logodevit-alt.png 5x" class="logo-light" alt="" /><img src="#" srcset="style/images/logodevit.png 1x, style/images/logodevit.png 5x" class="logo-dark" alt="" /></a>
+          <div class="navbar-brand"> <a href="index.html"><img src="#" srcset="style/images/logodevit-alt.png 5x, style/images/logodevit-alt.png 5x" class="logo-light" alt="" /><img src="#" srcset="style/images/logodevit.png 5x, style/images/logodevit.png 5x" class="logo-dark" alt="" /></a>
           </div>
           <!-- /.navbar-brand -->
         </div>
@@ -300,13 +305,13 @@ $(document).ready(function(){
   <!-- /.light-wrapper -->
   
   <div class="light-wrapper" id="team">
-    <div class="container inner">
+    <div class="container inner photos">
       <div class="section-title text-center">
         <h3>Meet Our Team</h3>
       </div>
       <div class="row grid-view" style="margin-left: 20%;">
         <!-- /column -->
-        <div class="col-sm-3 text-center">
+        <div class="col-sm-3 text-center photos">
           <figure><img src="style/images/art/sumit.jpg" alt="" /></figure>
           <h4 class="post-title">Sumit Ghosh</h4>
           <div class="meta">CEO and Lead Developer</div>
